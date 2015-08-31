@@ -1,0 +1,21 @@
+{
+  "name": "lionware/symfony-session-timeout",
+  "description": "Invalidate Symfony sessions based on inactivity for a certain period of time",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nick Stemerdink",
+      "email": "nick.stemerdink@lionware.solutions"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.9",
+    "symfony/framework-bundle": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lionware\\SymfonySessionTimeoutBundle\\": "src/Lionware/SymfonySessionTimeoutBundle/"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+parameters:
+    lionware_symfony_session_timeout.listener.session.class: Lionware\SymfonySessionTimeoutBundle\EventListener\SessionListener
+services:
+    lionware_symfony_session_timeout.listener.session:
+        class: %lionware_symfony_session_timeout.listener.session.class%
+        arguments: [%lionware_symfony_session_timeout.session.expiration_time%]
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: 9 }
