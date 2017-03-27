@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode->children()
             ->arrayNode('session')->isRequired()->children()
-            ->integerNode('expiration_time')->isRequired()->cannotBeEmpty()->end()
+            ->integerNode('expiration_time')->isRequired()->end()
         ->end();
 
         return $treeBuilder;
