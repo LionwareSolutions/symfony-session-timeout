@@ -35,7 +35,7 @@ Add the configuration in `app/config/config.yml`
 ```yml
 lionware_symfony_session_timeout:
     session:
-        expiration_time: %novamedia_session_expiration_time%
+        expiration_time: "%novamedia_session_expiration_time%"
 ```
 
 ## Notes
