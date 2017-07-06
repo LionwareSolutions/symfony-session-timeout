@@ -8,7 +8,7 @@ This method is more accurate and does not depend on garbage collection parameter
 
 Add SymfonySessionTimeout in your composer.json
 
-```js
+```json
 {
     "require": {
         "lionware/symfony-session-timeout": "*"
@@ -19,8 +19,6 @@ Add SymfonySessionTimeout in your composer.json
 Register the bundle in your `app/AppKernel.php`:
 
 ```php
-<?php
-
 public function registerBundles()
 {
     $bundles = array(
