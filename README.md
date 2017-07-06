@@ -30,12 +30,18 @@ public function registerBundles()
 )
 ```
 
+Add the parameter in `app/config/parameters.yml` and set the value to your preferred expiration time (which is set to an hour in this example).
+```yml
+parameters:
+    lionware_session_expiration_time: 3600
+```
+
 Add the configuration in `app/config/config.yml`
 
 ```yml
 lionware_symfony_session_timeout:
     session:
-        expiration_time: "%novamedia_session_expiration_time%"
+        expiration_time: "%lionware_session_expiration_time%"
 ```
 
 ## Notes
