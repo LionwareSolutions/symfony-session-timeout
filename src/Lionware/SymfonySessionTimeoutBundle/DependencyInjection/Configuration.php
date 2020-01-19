@@ -13,8 +13,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('lionware_symfony_session_timeout');
+        $treeBuilder = new TreeBuilder('lionware_symfony_session_timeout');
+        $rootNode = \method_exists($treeBuilder, 'getRootNode') ? $treeBuilder->getRootNode() : $treeBuilder->root('lionware_symfony_session_timeout');
 
         $rootNode->children()
             ->arrayNode('session')->isRequired()->children()
